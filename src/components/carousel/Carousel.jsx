@@ -40,6 +40,7 @@ const Carousel = ({ data, loading, endpoint, title }) => {
                     <div className="textBlock">
                         <div className="title skeleton">
                             <div className="date skeleton">
+                                Skeleton
                             </div>
                         </div>
                     </div>
