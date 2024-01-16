@@ -8,9 +8,9 @@ import Home from "./pages/home/Home";
 import Details from "./pages/details/Details";
 import SearchResult from "./pages/searchResult/SearchResult";
 import Explore from "./pages/explore/Explore";
-import PageNotFound from "./pages/pageNotFound/PageNotFound";
 import Header from "./components/header/Header";
 import Footer from "./components/footer/footer";
+import PageNotFound from "./pages/pageNotFound/PageNotFound";
 
 function App() {
   const dispatch = useDispatch();
