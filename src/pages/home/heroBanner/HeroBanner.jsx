@@ -7,18 +7,18 @@ import ContentWrapper from "../../../components/contentWrapper/ContentWrapper";
 import './style.scss'
 
 const HeroBanner = () => {
+  const { url } = useSelector((state) => state.home);
   const [background, setBackground] = useState("");
   const [query, setquery] = useState("");
   const navigate = useNavigate();
-  const { url } = useSelector((state) => state.home);
 
   const { data, loading } = useFetch("/movie/upcoming");
 
   useEffect(() => {
-    const bg =
-      url?.backdrop +
-      data?.results?.[Math.floor(Math.random() * 20)]?.backdrop_path;
+    if(!loading){
+    const bg = url?.backdrop + data?.results?.[Math.floor(Math.random() * 15)]?.backdrop_path;
     setBackground(bg);
+    }
   }, [data]);
 
   const searchQueryHandler = (event) => {

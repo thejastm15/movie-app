@@ -23,7 +23,6 @@ function App() {
 
   const test = () => {
     fetchData("/configuration").then((res) => {
-      console.log(res);
       const url = {
         backdrop: res.images.secure_base_url + "original",
         poster: res.images.secure_base_url + "original",
@@ -44,7 +43,6 @@ function App() {
     })
 
     const data = await Promise.all(promises)
-    console.log(data)
     data.map(({genres})=>{
       return genres.map((item)=>(allGeners[item.id]=item))
     })
